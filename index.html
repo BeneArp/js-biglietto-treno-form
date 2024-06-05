@@ -11,8 +11,28 @@
 <body>
     
     <div>
-        <h2 id="prezzo"></h2>
-        <h2 id="prezzo-scontato"></h2>
+        <!-- campo con nome e cognome -->
+        <span>Nome e Cognome</span>
+        <input type="text">
+
+        <!-- campo chilometri -->
+        <span>Chilometri da percorrere</span>
+        <input type="text">
+
+        <!-- scelta fascia d'età -->
+        <select name="Anni" id="anni">
+            <option value="minorenne">Meno di 18 anni</option>
+            <option value="18-65">Tra i 18 e i 65 annni</option>
+            <option value="65 >=">Da i 65 anni in su</option>
+        </select>
+
+        <!-- bottoni -->
+        <button class="calcolo">Genera</button>
+        <button class="close">Annulla</button>
+    </div>
+
+    <div>
+        <div id="prezzo"></div>
     </div>
 
     <!-- JS -->

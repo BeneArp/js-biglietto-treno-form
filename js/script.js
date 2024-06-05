@@ -24,20 +24,23 @@ let prezzoScontoEta;
 
 
 
-// RACCOLTA DATI UTENTE
-// chiedere all'utente il numero di chilometri da percorrere
-const chilometriDaPercorrere = parseInt(prompt("Inserisci il numero di chilomteri da percorrere"));
+// // RACCOLTA DATI UTENTE
+// // chiedere all'utente il numero di chilometri da percorrere
+// const chilometriDaPercorrere = parseInt(prompt("Inserisci il numero di chilomteri da percorrere"));
 
-// stampo in console il numero di km registrati
-console.log(chilometriDaPercorrere);
+// // stampo in console il numero di km registrati
+// console.log(chilometriDaPercorrere);
 
 
 
-// chiedere all'utente la sua età
-const anniUtente = parseInt(prompt("Inserisci la tua età"));
+// // chiedere all'utente la sua età
+// const anniUtente = parseInt(prompt("Inserisci la tua età"));
 
-// stampo in console l'età dell'utente
-console.log(anniUtente);
+// // stampo in console l'età dell'utente
+// console.log(anniUtente);
+
+
+
 
 
 
