@@ -32,7 +32,7 @@
                 <div>Fascia d'età</div>
                 <select name="Anni" id="anni" class="info">
                     <option value="minorenne">Meno di 18 anni</option>
-                    <option value="18-65">Tra i 18 e i 65 annni</option>
+                    <option value="18-64">Tra i 18 e i 64 annni</option>
                     <option value="65 >=">Da i 65 anni in su</option>
                 </select>
             </span>    
@@ -47,13 +47,46 @@
 
     </div>   
 
-    <div>
-
+    <div id="hidden">
         <h2>IL TUO BIGLIETTO</h2>
 
         <div id="ticket">
-            <div id="prezzo"></div>
+
+            <h4>DETTAGLI PASSEGGERI</h4>
+
+            <div>
+
+                <span class="nominativo">
+                    <h3>NOME PASSEGGERO</h3>
+                    <span id="nomepasseggero"></span>
+                </span>
+
+                <table>
+                    <thead>
+                        <tr>
+                        <th>Offerta</th>
+                        <th>Carrozza</th>
+                        <th>Codice CP</th>
+                        <th>Costo Biglietto</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                        <td id="tariffa"></td>
+                        <td id="carrozza"></td>
+                        <td id="codice"></td>
+                        <td id="prezzo"></td>
+                        </tr>
+                    </tbody>
+
+                  </table>
+            </div>
+
         </div>
+        <!-- <div id="ticket">
+            <div id="prezzo"></div>
+        </div> -->
     </div>  
 
     <!-- JS -->

@@ -24,6 +24,9 @@ const chilometriDaPercorrere = document.getElementById("chilometri");
 // prendo dal documento il form per il campo anni
 const anniUtente = document.getElementById("anni");
 
+// prendo dal documento il div con i dettagli del biglietto in display none
+const anteprimaBiglietto = document.getElementById("hidden");
+
 
 
 
@@ -50,7 +53,10 @@ bottoneCalcolo.addEventListener('click',
         console.log("prezzo intero " ,prezzoBiglietto);
 
         // output prezzo base
-        document.getElementById("prezzo").innerHTML = ("Il prezzo del tuo biglietto è: " + (prezzoBiglietto).toFixed(2) + "€");
+        document.getElementById("prezzo").innerHTML = ((prezzoBiglietto).toFixed(2) + "€");
+
+        // output tipo di tariffa
+        document.getElementById("tariffa").innerHTML = ("Biglietto Standard");
 
 
 
@@ -64,7 +70,10 @@ bottoneCalcolo.addEventListener('click',
             console.log("prezzo sconto minorenni " ,prezzoScontoMinori);
 
             // output prezzo minori
-            document.getElementById("prezzo").innerHTML = ("Il prezzo del tuo biglietto con lo sconto per i Minorenni è: " + (prezzoScontoMinori).toFixed(2) + "€");
+            document.getElementById("prezzo").innerHTML = ((prezzoScontoMinori).toFixed(2) + "€");
+
+            // output tipo di tariffa
+            document.getElementById("tariffa").innerHTML = ("Biglietto Minorenni");
 
 
             // CALCOLO PREZZO SCONTATO SE L'UTENTE >= 65 ANNI
@@ -76,8 +85,49 @@ bottoneCalcolo.addEventListener('click',
             console.log("prezzo sconto età " ,prezzoScontoEta);
 
             // output prezzo >= 65 anni
-            document.getElementById("prezzo").innerHTML = ("Il prezzo del tuo biglietto con lo sconto dai 65 anni in su è: " + (prezzoScontoEta).toFixed(2) + "€");
+            document.getElementById("prezzo").innerHTML = ((prezzoScontoEta).toFixed(2) + "€");
+
+            // output tipo di tariffa
+            document.getElementById("tariffa").innerHTML = ("Biglietto Over 65");
         }
+
+
+
+        // ATTRIBUZIONE VALORI CAMPI DA MOSTRARE NELLA SEZIONE "IL MIO BIGLIETTO"
+        // prendo dal documento il form per il campo nome e cognome
+        const datiUtente = document.querySelector(".info");
+
+        // attribuisco alla variabile il valora inserito nel form
+        let nomeCognome = datiUtente.value;
+
+        // output valore nome e cognome utente
+        document.getElementById("nomepasseggero").innerHTML = nomeCognome;
+
+
+        // cambio display div con dettagli del biglietto al click
+        anteprimaBiglietto.style.display = "block"
+
+    }
+
+);
+
+
+// output numero carrozza
+document.getElementById("carrozza").innerHTML = Math.floor((Math.random() * 10) + 1);
+
+
+// output codice
+document.getElementById("codice").innerHTML = Math.floor(Math.random() * 10000);
+
+
+
+
+// prendo dal documento il bottone annulla
+const bottoneReset = document.querySelector(".close");
+
+bottoneReset.addEventListener('click',
+    function(){
+        anteprimaBiglietto.style.display = "none"
     }
 );
 
@@ -85,18 +135,3 @@ bottoneCalcolo.addEventListener('click',
 
 
 
-
-
-
-
-
-
-
-
-// // stampo in console il prezzo scontato del 20%
-// console.log("Il prezzo con lo sconto per minorenni è: ",prezzoScontoMinori + "€");
-
-
-
-// // stampo in console il prezzo scontato del 40%
-// console.log("Il prezzo con lo sconto dai 65 anni in su è: ",prezzoScontoEta + "€");
