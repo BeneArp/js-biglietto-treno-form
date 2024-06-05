@@ -11,29 +11,50 @@
 <body>
     
     <div>
-        <!-- campo con nome e cognome -->
-        <span>Nome e Cognome</span>
-        <input type="text" class="info">
 
-        <!-- campo chilometri -->
-        <span>Chilometri da percorrere</span>
-        <input type="text" class="info" id="chilometri">
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        
+        <div id="form">
+            <!-- campo con nome e cognome -->
+            <span>
+                <div>Nome e Cognome</div>
+                <input type="text" class="info">
+            </span>
 
-        <!-- scelta fascia d'età -->
-        <select name="Anni" id="anni" class="info">
-            <option value="minorenne">Meno di 18 anni</option>
-            <option value="18-65">Tra i 18 e i 65 annni</option>
-            <option value="65 >=">Da i 65 anni in su</option>
-        </select>
+            <!-- campo chilometri -->
+            <span>
+                <div>Chilometri da percorrere</div>
+                <input type="text" class="info" id="chilometri">
+            </span>    
 
-        <!-- bottoni -->
-        <button class="calcolo">Genera</button>
-        <button class="close">Annulla</button>
-    </div>
+            <!-- scelta fascia d'età -->
+            <span>
+                <div>Fascia d'età</div>
+                <select name="Anni" id="anni" class="info">
+                    <option value="minorenne">Meno di 18 anni</option>
+                    <option value="18-65">Tra i 18 e i 65 annni</option>
+                    <option value="65 >=">Da i 65 anni in su</option>
+                </select>
+            </span>    
+
+            <div>
+                <!-- bottoni -->
+                <button class="calcolo">Genera</button>
+                <button class="close">Annulla</button>
+            </div>
+
+        </div>
+
+    </div>   
 
     <div>
-        <div id="prezzo"></div>
-    </div>
+
+        <h2>IL TUO BIGLIETTO</h2>
+
+        <div id="ticket">
+            <div id="prezzo"></div>
+        </div>
+    </div>  
 
     <!-- JS -->
     <script type="text/javascript" src="js/script.js"></script>
